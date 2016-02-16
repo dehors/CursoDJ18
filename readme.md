@@ -9,8 +9,8 @@
 3- Crear un nuevo proyecto
 	https://www.youtube.com/watch?v=lPmkl4jtYgA
 
-##Herramientas
+##Package
 
-`Virtualenv 14.0.6`
-`Django 1.8`
- 
+`Virtualenv==14.0.6`
+`Django==1.8`
+`MySQL-python==1.2.4` 
