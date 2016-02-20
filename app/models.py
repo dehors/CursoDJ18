@@ -9,4 +9,4 @@ class SingUp(models.Model):
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
 	def __unicode__(self):
-		return self.email
+		return self.email#Se muestra en el admin para darle show

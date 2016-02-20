@@ -12,5 +12,7 @@
 ##Package
 
 `Virtualenv==14.0.6`
+
 `Django==1.8`
+
 `MySQL-python==1.2.4` 
