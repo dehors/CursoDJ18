@@ -27,7 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'luismartinez242011@gmail.com'
+EMAIL_HOST_PASSWORD = 'fwfljhjvewhxaatq'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
+#if using gmail, you will need to unlock captcha to enable django to send for you:
+#https://accounts.google.com/displayunlockcaptcha
+#ver error de acutentificacion dos pasos:http://stackoverflow.com/questions/28421887/django-email-with-smtp-gmail-smtpauthenticationerror-534-application-specific-pa
 # Application definition
 
 INSTALLED_APPS = (
