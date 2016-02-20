@@ -1,3 +1,7 @@
+{% extends "layout/master.html" %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
 <h1>{{ title }}</h1>
 
 {{ user }}
@@ -7,3 +11,5 @@
 	{{ form.as_p}}
 	<input type="submit" value="Create Post" />
 </form>
+
+{% endblock content %}

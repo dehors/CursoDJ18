@@ -45,13 +45,13 @@ def contact(request):
 		email = form.cleaned_data.get("email")
 		message = form.cleaned_data.get("message")
 		full_name = form.cleaned_data.get("full_name")
-		
+
 		subject = 'Correo Django'
 		form_mail = settings.EMAIL_HOST_USER
 		to_mail = form_mail
 		contact_message = "%s: %s via %s"%(full_name, message, email)
 
-		send_mail(subject, contact_message, form_mail,[to_mail], fail_silently=False)
+		send_mail(subject, contact_message, form_mail,[to_mail], fail_silently=False)#see the errors of email
 
 	context = {
 		"form": form,
