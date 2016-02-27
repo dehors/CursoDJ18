@@ -3,8 +3,14 @@
 
 {% block content %}
 <h1>{{ title }}</h1>
-
+	{% if user.is_authenticated %}
+			<p>Your account doesn't have access to this page. To proceed,
+			please login with an account that has access.</p>
+	{% else %}
+			<p>Please login to see this page.</p>
+	{% endif %}
 {{ user }}
 {{ request.user }}
 {% include  'partial/form.html' %}
+
 {% endblock content %}
