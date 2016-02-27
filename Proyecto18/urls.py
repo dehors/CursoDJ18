@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^', include('app.urls')),
     url(r'^about', 'Proyecto18.views.about', name='about'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 ]
