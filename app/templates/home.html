@@ -12,5 +12,7 @@
 {{ user }}
 {{ request.user }}
 {% include  'partial/form.html' %}
-
+{% for  obj in queryset%}
+	{{ forloop.counter }} {{ obj.full_name }}
+{% endfor %}
 {% endblock content %}

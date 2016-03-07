@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import ContactForm, SingUpForm
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import SingUp
 # Create your views here.
 
 def home(request):
@@ -29,9 +30,11 @@ def home(request):
 		}		
 		return render(request, "home.html", context)
 
+	queryset = SingUp.objects.all().order_by('-timestamp').filter(full_name__icontains="Justin")
 	context = {
 		"title": title,
 		"form": form,
+		"queryset":queryset,
 	}
 	return render(request, "home.html", context)
 
